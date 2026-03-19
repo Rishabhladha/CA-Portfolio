@@ -4,6 +4,7 @@ import { TypeAnimation } from 'react-type-animation';
 import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown, FaPhoneAlt, FaTimes } from 'react-icons/fa';
 import './Hero.css';
 
+
 export default function Hero() {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   return (
@@ -73,6 +74,8 @@ export default function Hero() {
             >
               <a href="#projects" className="btn btn--primary">View My Work</a>
               <a href="#contact" className="btn btn--outline">Get In Touch</a>
+              <a href="/Rishabh-cv-doc-ca.pdf" target="_blank" rel="noreferrer" className="btn btn--outline">View CV</a>
+              <a href="/Rishabh-cv-doc-ca.pdf" download="Rishabh_Ladha_CV.pdf" className="btn btn--primary">Download CV</a>
             </motion.div>
 
             <motion.div
