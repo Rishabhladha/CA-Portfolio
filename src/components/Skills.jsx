@@ -10,33 +10,33 @@ const skillGroups = [
   {
     category: 'Frontend',
     skills: [
-      { name: 'HTML5', icon: <FaHtml5 />, color: '#e34f26', level: 92 },
-      { name: 'CSS3', icon: <FaCss3Alt />, color: '#1572b6', level: 88 },
-      { name: 'JavaScript', icon: <FaJs />, color: '#f7df1e', level: 85 },
-      { name: 'React', icon: <FaReact />, color: '#61dafb', level: 88 },
-      { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: '#38bdf8', level: 82 },
+      { name: 'HTML5', icon: <FaHtml5 />, color: '#e34f26' },
+      { name: 'CSS3', icon: <FaCss3Alt />, color: '#1572b6' },
+      { name: 'JavaScript', icon: <FaJs />, color: '#f7df1e' },
+      { name: 'React', icon: <FaReact />, color: '#61dafb' },
+      { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: '#38bdf8' },
     ],
   },
   {
     category: 'Backend',
     skills: [
-      { name: 'Node.js', icon: <FaNodeJs />, color: '#68a063', level: 85 },
-      { name: 'Express.js', icon: <SiExpress />, color: '#ffffff', level: 83 },
-      { name: 'MongoDB', icon: <SiMongodb />, color: '#47a248', level: 80 },
-      { name: 'Java', icon: <FaJava />, color: '#f89820', level: 72 },
-      { name: 'Python', icon: <FaPython />, color: '#3776ab', level: 70 },
+      { name: 'Node.js', icon: <FaNodeJs />, color: '#68a063' },
+      { name: 'Express.js', icon: <SiExpress />, color: '#ffffff' },
+      { name: 'MongoDB', icon: <SiMongodb />, color: '#47a248' },
+      { name: 'Java', icon: <FaJava />, color: '#f89820' },
+      { name: 'Python', icon: <FaPython />, color: '#3776ab' },
     ],
   },
   {
     category: 'Other',
     skills: [
-      { name: 'Laravel / PHP', icon: <SiLaravel />, color: '#ff2d20', level: 65 },
-      { name: 'REST APIs', icon: <FaDatabase />, color: '#a855f7', level: 88 },
+      { name: 'Laravel / PHP', icon: <SiLaravel />, color: '#ff2d20' },
+      { name: 'REST APIs', icon: <FaDatabase />, color: '#a855f7' },
     ],
   },
 ];
 
-function SkillBar({ name, icon, color, level, i }) {
+function SkillBar({ name, icon, color, i }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true });
 
@@ -59,7 +59,7 @@ function SkillBar({ name, icon, color, level, i }) {
           className="skill-item__bar-fill"
           style={{ background: `linear-gradient(90deg, ${color}99, ${color})` }}
           initial={{ width: 0 }}
-          animate={inView ? { width: `${level}%` } : { width: 0 }}
+          animate={inView ? { width: '100%' } : { width: 0 }}
           transition={{ duration: 0.9, delay: i * 0.06 + 0.3, ease: 'easeOut' }}
         />
       </div>
@@ -109,3 +109,4 @@ export default function Skills() {
     </section>
   );
 }
+
